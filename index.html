@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/header.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Bruno Massoterapia</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="nav_logo">
+                <i class="fa-solid fa-hand-holding"></i> Bruno Massoterapia
+            </div>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Massagens</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="galeria.html" target="_blank">Galeria</a>
+                </li>
+
+            </ul>
+
+            <a href="https://wa.me/5548984313119?text=%F0%9F%91%8B%20Ol%C3%A1!%20Obrigado%20por%20entrar%20em%20contato.%20Como%20posso%20ajudar%20voc%C3%AA%20hoje%3F"
+                    target="_blank" rel="noopener noreferrer">
+                <button class="btn-default">Agende aqui</button>
+            </a>
+
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">masssagens</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/5548984313119?text=%F0%9F%91%8B%20Ol%C3%A1!%20Obrigado%20por%20entrar%20em%20contato.%20Como%20posso%20ajudar%20voc%C3%AA%20hoje%3F"
+                    target="_blank" rel="noopener noreferrer">
+                <button class="btn-default">Agende aqui</button>
+            </a>
+        </div>
+    </header>
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    O alívio que chega <span class="break">até <span class="highlight">você</span></span>
+                </h1>
+
+
+                <p class="description">
+                    O toque terapêutico que acalma corpo e mente, envolto em cuidado, presença e a leveza de um abraço
+                    que cura."
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Ver Massagens
+                    </a>
+
+                    <a href="tel:+48984313119" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (48) 98431-3119
+                    </a>
+                </div>
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5548984313119?text=%F0%9F%91%8B%20Ol%C3%A1!%20Obrigado%20por%20entrar%20em%20contato.%20Como%20posso%20ajudar%20voc%C3%AA%20hoje%3F"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+
+                    <a href="https://www.instagram.com/brunnomassoterapeuta/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!-- <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>-->
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/img/Boneco-massagem.png" alt="">
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Massagens</h2>
+            <h3 class="section-subtitle">conheça o melhor da massagem</h3>
+
+            <div id="masssagens"> <!-- pratos -->
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/Drenagem.png" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Drenagem Linfática
+                    </h3>
+
+                    <span class="massagem-description">
+                        "Essa técnica ajuda na eliminação de toxinas, reduz o inchaço e melhora a circulação.
+                        Resultados visíveis e sensação de leveza desde a primeira sessão!"
+                    </span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$150,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/liberacao-pro-site-600.JPG" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Liberação Miofascial
+                    </h3>
+
+                    <span class="massagem-description">
+                        "Alívio imediato de tensões e dores com a técnica de liberação miofascial."
+                    </span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$150,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/acunputura-600.png" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Acupuntura
+                    </h3>
+
+                    <span class="massagem-description">
+                        "A acupuntura também pode ser utilizada para tratar condições de saúde mental, como ansiedade e
+                        depressão, ajudando a reduzir o estresse e promover o bem-estar emocional. "
+                    </span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$150,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/ventosa-600.png" class="massagem-image" alt="">
+
+                    <h3 class="Massagem-title">
+                        ventosa Terapia
+                    </h3>
+
+                    <span class="massagem-description">
+                        "A vida é como uma caixa de docinhos sortidos: cheia de surpresas doces e deliciosas!" </span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$150,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/Perdras-600.JPG" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Pedras Quentes
+                    </h3>
+
+                    <span class="massagem-description">
+                        "A vida é como uma caixa de docinhos sortidos: cheia de surpresas doces e deliciosas!" </span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$150,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/Relaxante.png" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Massagem Relaxante
+                    </h3>
+
+                    <span class="massagem-description">
+                        "Toques suaves que aliviam a tensão, promovem bem-estar e renovam corpo e mente. A verdadeira
+                        pausa que você merece."</span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$120,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/Auriculo.JPG" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Auriculoterapia
+                    </h3>
+
+                    <span class="massagem-description">
+                        "Toques suaves que aliviam a tensão, promovem bem-estar e renovam corpo e mente. A verdadeira
+                        pausa que você merece."</span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$80,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="massagem">
+                    <div class="massagem-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/reflexologia.JPG" class="massagem-image" alt="">
+
+                    <h3 class="massagem-title">
+                        Reflexologia Podal
+                    </h3>
+
+                    <span class="massagem-description">
+                        "Toques suaves que aliviam a tensão, promovem bem-estar e renovam corpo e mente. A verdadeira
+                        pausa que você merece."</span>
+
+                    <div class="massagem-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>500+</span>
+                    </div>
+
+                    <div class="massagem-price">
+                        <h4>R$120,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <img src="src/img/IMG_8381-removebg-preview.png" id="testimonial_massagem" alt="">
+
+            <div id="testimonials_content">
+                <h2 class="section-title">
+                    Depoimentos
+                </h2>
+                <h3 class="section-subtitle">
+                    O que os cliente falam sobre nós.
+                </h3>
+
+                <div id="feedbacks">
+                    <div class="feedbacks">
+                        <img src="src/img/avatar.png" class="feedbacks-avatar" alt="">
+
+                        <div class="feedbacks-content">
+                            <p>
+                                Fulana de tal
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+
+                            <p>
+                                "Experimentei um doce da Doceria Doce Terapia e foi incrível! A combinação perfeita de
+                                ingredientes frescos e a textura maravilhosa tornaram cada mordida uma verdadeira
+                                delícia.
+                                Superou todas as minhas expectativas. Recomendo a todos que buscam um doce
+                                irresistível!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedbacks">
+                        <img src="src/img/avatar.png" class="feedbacks-avatar" alt="">
+
+                        <div class="feedbacks-content">
+                            <p>
+                                Fulana de tal
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+
+                            <p>
+                                "Experimentei um doce da Doceria Doce Terapia e foi incrível! A combinação perfeita de
+                                ingredientes frescos e a textura maravilhosa tornaram cada mordida uma verdadeira
+                                delícia.
+                                Superou todas as minhas expectativas. Recomendo a todos que buscam um doce
+                                irresistível!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-default-ver">
+                    Ver mais Avaliações
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer_items">
+            <span id="cpyright">
+                &copy 2025 Bruno Pereira
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="https://wa.me/5548984313119?text=%F0%9F%91%8B%20Ol%C3%A1!%20Obrigado%20por%20entrar%20em%20contato.%20Como%20posso%20ajudar%20voc%C3%AA%20hoje%3F"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <!--<a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
