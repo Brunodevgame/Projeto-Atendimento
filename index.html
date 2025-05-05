@@ -381,70 +381,50 @@
 
         <section id="testimonials">
             <img src="src/img/IMG_8381-removebg-preview.png" id="testimonial_massagem" alt="">
-
+        
             <div id="testimonials_content">
-                <h2 class="section-title">
-                    Depoimentos
-                </h2>
-                <h3 class="section-subtitle">
-                    O que os cliente falam sobre nós.
-                </h3>
+                <h2 class="section-title">Depoimentos</h2>
+                <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
+        
+                <!-- Formulário para novos depoimentos -->
+                <form onsubmit="submitFeedback(event)" class="feedback-form">
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                    <textarea id="message" placeholder="Sua mensagem" required></textarea>
+                    <select id="rating">
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                    <button type="submit" class="btn-default-dp">Enviar Depoimento</button>
+                </form>
+        
+                <!-- Lista de depoimentos aprovados (carregados via PHP) -->
+                <div class="feedbacks">
+                    <img src="src/img/avatar.png" class="feedbacks-avatar" alt="">
 
-                <div id="feedbacks">
-                    <div class="feedbacks">
-                        <img src="src/img/avatar.png" class="feedbacks-avatar" alt="">
+                    <div class="feedbacks-content">
+                        <p>
+                            Fulana de tal
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </p>
 
-                        <div class="feedbacks-content">
-                            <p>
-                                Fulana de tal
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-
-                            <p>
-                                "Experimentei um doce da Doceria Doce Terapia e foi incrível! A combinação perfeita de
-                                ingredientes frescos e a textura maravilhosa tornaram cada mordida uma verdadeira
-                                delícia.
-                                Superou todas as minhas expectativas. Recomendo a todos que buscam um doce
-                                irresistível!"
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="feedbacks">
-                        <img src="src/img/avatar.png" class="feedbacks-avatar" alt="">
-
-                        <div class="feedbacks-content">
-                            <p>
-                                Fulana de tal
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-
-                            <p>
-                                "Experimentei um doce da Doceria Doce Terapia e foi incrível! A combinação perfeita de
-                                ingredientes frescos e a textura maravilhosa tornaram cada mordida uma verdadeira
-                                delícia.
-                                Superou todas as minhas expectativas. Recomendo a todos que buscam um doce
-                                irresistível!"
-                            </p>
-                        </div>
+                        <p>
+                            "Experimentei um doce da Doceria Doce Terapia e foi incrível! A combinação perfeita de
+                            ingredientes frescos e a textura maravilhosa tornaram cada mordida uma verdadeira
+                            delícia.
+                            Superou todas as minhas expectativas. Recomendo a todos que buscam um doce
+                            irresistível!"
+                        </p>
                     </div>
                 </div>
-
-                <button class="btn-default-ver">
-                    Ver mais Avaliações
-                </button>
             </div>
         </section>
     </main>
@@ -469,9 +449,11 @@
                 </a> -->
             </div>
         </div>
+        
     </footer>
 
     <script src="src/javascript/script.js"></script>
+    
 </body>
 
 </html>

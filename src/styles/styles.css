@@ -108,3 +108,42 @@ a {
 .section-subtitle {
     font-size: 2.1875rem;
 }
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.feedback-form textarea {
+    min-height: 100px;
+}
+.btn-default-dp {
+    padding: 10px 24px;
+    font-size: 1.1rem;
+    background-color: var(--color-primary-4); /* ou uma cor como #FF69B4 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+
+}
+
+.btn-default-dp:hover {
+    background-color: var(--color-primary-3); /* cor mais escura para hover */
+    transform: scale(1.03);
+}
