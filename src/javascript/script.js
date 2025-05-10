@@ -1,13 +1,90 @@
+
+
 // Quando o documento estiver completamente carregado, execute o código:
-$(document).ready(function() {
+$(document).ready(function () {
+    const firebaseConfig = {
+        apiKey: "AIzaSyD0mK2Jo32JQD7938LhQEb_0ik7MTiotgc",
+        authDomain: "atendimento-massagem.firebaseapp.com",
+        databaseURL: "https://atendimento-massagem-default-rtdb.firebaseio.com",
+        projectId: "atendimento-massagem",
+        storageBucket: "atendimento-massagem.appspot.com",
+        messagingSenderId: "447669411488",
+        appId: "1:447669411488:web:73acc76180620805dff3c5"
+    };
+
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+
+    const database = firebase.database();
+    database.ref("depoimentos").once("value")
+        .then(snapshot => {
+            const dados = snapshot.val();
+            const feedbacksContainer = document.querySelector(".feedbacks");
+
+            // Limpa conteúdo atual
+            feedbacksContainer.innerHTML = "";
+
+            if (dados) {
+                Object.values(dados).forEach(depoimento => {
+                    const { nome, mensagemdepoimento, nota } = depoimento;
+                    const estrelas = Number(nota) || 0;
+
+                    // Cria elementos
+                    const contentDiv = document.createElement("div");
+                    contentDiv.className = "feedbacks-content";
+
+                    const pNome = document.createElement("p");
+                    pNome.textContent = nome + " ";
+
+                    const spanEstrelas = document.createElement("span");
+
+                    for (let i = 0; i < estrelas; i++) {
+                        const estrela = document.createElement("i");
+                        estrela.className = "fa-solid fa-star";
+                        spanEstrelas.appendChild(estrela);
+                    }
+
+                    pNome.appendChild(spanEstrelas);
+
+                    const pMensagem = document.createElement("p");
+                    pMensagem.textContent = `"${mensagemdepoimento}"`;
+
+                    contentDiv.appendChild(pNome);
+                    contentDiv.appendChild(pMensagem);
+
+                    feedbacksContainer.appendChild(contentDiv);
+                });
+            } else {
+                feedbacksContainer.innerHTML = "<p>Nenhum depoimento encontrado.</p>";
+            }
+        })
+        .catch(error => {
+            console.error("Erro ao buscar comentários:", error);
+        });
+
 
     // Quando o botão #mobile_btn for clicado:
     $("#mobile_btn").on("click", function () {
         // Adiciona ou remove a classe "active" no menu móvel
         $("#mobile_menu").toggleClass("active");
-        
+
         // Dentro do botão, procura o <i> (ícone) e adiciona/remove a classe "fa-x" (ícone de fechar)
         $("#mobile_btn").find("i").toggleClass("fa-x");
+    });
+
+    $("#enviarDepoimento").on("click", function () {
+        database.ref("depoimentos").push({
+            nome: $("#nomeDepoimento").val(),
+            mensagemdepoimento: $("#mensagemDepoimento").val(),
+            nota: $("#notaDepoimento").val(),
+            data: new Date().toISOString()
+        })
+            .then(() => alert("✅ Depoimento salvo!"))
+            .catch((err) => {
+                console.error("❌ Erro:", err);
+                alert("Erro ao salvar.");
+            });
     });
 
     // Seleciona todas as seções da página
@@ -17,7 +94,7 @@ $(document).ready(function() {
     const navItems = $(".nav-item");
 
     // Quando o usuário rolar a página:
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
         // Seleciona o cabeçalho
         const header = $("header");
 
@@ -37,7 +114,7 @@ $(document).ready(function() {
         }
 
         // Para cada seção da página:
-        sections.each(function(i) {
+        sections.each(function (i) {
             const section = $(this); // Seção atual
 
             // Posição do topo da seção (ajustada para compensar o header)

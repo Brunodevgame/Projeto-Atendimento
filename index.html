@@ -14,6 +14,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
     <title>Bruno Massoterapia</title>
 </head>
 
@@ -387,44 +390,24 @@
                 <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
         
                 <!-- Formulário para novos depoimentos -->
-                <form onsubmit="submitFeedback(event)" class="feedback-form">
-                    <input type="text" id="name" placeholder="Seu nome" required>
-                    <textarea id="message" placeholder="Sua mensagem" required></textarea>
-                    <select id="rating">
+                <div class="feedback-form">
+                    <input type="text" id="nomeDepoimento" placeholder="Seu nome" required>
+                    <textarea id="mensagemDepoimento" placeholder="Sua mensagem" required></textarea>
+                    <select id="notaDepoimento">    
                         <option value="5">⭐⭐⭐⭐⭐</option>
                         <option value="4">⭐⭐⭐⭐</option>
                         <option value="3">⭐⭐⭐</option>
                         <option value="2">⭐⭐</option>
                         <option value="1">⭐</option>
                     </select>
-                    <button type="submit" class="btn-default-dp">Enviar Depoimento</button>
-                </form>
+                    <button id="enviarDepoimento" class="btn-default-dp">Enviar Depoimento</button>
+                </div>
         
                 <!-- Lista de depoimentos aprovados (carregados via PHP) -->
                 <div class="feedbacks">
-                    <img src="src/img/avatar.png" class="feedbacks-avatar" alt="">
+                    
 
-                    <div class="feedbacks-content">
-                        <p>
-                            Fulana de tal
-                            <span>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-                        </p>
-
-                        <p>
-                            "Experimentei um doce da Doceria Doce Terapia e foi incrível! A combinação perfeita de
-                            ingredientes frescos e a textura maravilhosa tornaram cada mordida uma verdadeira
-                            delícia.
-                            Superou todas as minhas expectativas. Recomendo a todos que buscam um doce
-                            irresistível!"
-                        </p>
-                    </div>
-                </div>
+                    
             </div>
         </section>
     </main>

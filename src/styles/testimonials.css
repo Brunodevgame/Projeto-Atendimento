@@ -29,13 +29,19 @@
 
 .feedbacks {
     display: flex;
-    align-items: center;
+   
+    flex-direction: column;
     gap: 20px;
     background-color: #fff;
     padding: 12px;
     border-radius: 12px;
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
 }
+#feedbacks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* espaço entre os depoimentos */
+  }
 /* object-fit: cover garante que a imagem cubra todo o contêiner,
    preservando a proporção da imagem, mas pode cortar partes dela para preencher o espaço. */
 .feedbacks-avatar {
@@ -52,6 +58,7 @@
 .feedbacks-content span {
     color: var(--color-primary-4);
 }
+
 
 @media screen and (max-width: 1170px) {
     #testimonials {
